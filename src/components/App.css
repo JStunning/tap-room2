@@ -1,0 +1,85 @@
+:root {
+  --main-color: #FAF4F4;
+  --secondary-color: #ef962d;
+  --third-color: #9c5518;
+  --fourth-color: #5a3f11;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url('https://images.squarespace-cdn.com/content/v1/571e5836ab48de1a6d598e36/1464121739359-BT12TC0G6GWOG73M29LG/ke17ZwdGBToddI8pDm48kKV0nEQLrZCZyN20-sdpYlF7gQa3H78H3Y0txjaiv_0fYiipkZ87xgDekDUjSlg8vohVU6YYtSQ8H7TvSNSjCpUJf87PfuMIrVhFsgTICpaxZGjoBKy3azqku80C789l0mlM0or4nqX7jrn5yWu0hA3Qz8y0LQEFsvCavp5K6xK5MN4bOW2Qph0652cZlSdMGg/IMG_9415+%281%29.jpg?format=2500w');
+}
+
+button {
+  margin: 1% 0;
+  padding: 5px;
+  color: var(--third-color);
+  background-color: var(--main-color);
+  border-color: var(--third-color);
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+h2, h3 {
+  padding: 2%;
+}
+
+input {
+  margin: 1%;
+}
+
+form {
+  margin: 2%;
+}
+
+#Header {
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0.5%;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 3px;
+  text-align: center;
+  margin: 0 3%;
+  background-color: var(--third-color);
+  padding: 7.5% 5%;
+}
+
+#CurrentState {
+  background-color: var(--main-color);
+}
+
+#DailyKeg {
+  background-color: var(--main-color);
+}
+
+#kegImage {
+  width: 300px;
+  border: var(--third-color) 1px solid;
+}
+
+#DailyKegButton {
+  margin: 5%;
+}
+
+#kegDetailImage{
+  width: 300px;
+  margin: 1%;
+  border: var(--third-color) 1px solid;
+}
+
+#KegListElement {
+  margin-bottom: 2%;
+}
