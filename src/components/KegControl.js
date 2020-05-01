@@ -17,6 +17,7 @@ class KegControl extends React.Component {
           flavor: "Light and easily chuggable",
           price: "69",
           alcohol: "2.20",
+          pints: 100,
           id: "1"
         },
         {
@@ -25,6 +26,7 @@ class KegControl extends React.Component {
           flavor: "Medium dark with lots of hops",
           price: "59",
           alcohol: "5.2",
+          pints: 100,
           id: "2"
         },
         {
@@ -33,6 +35,7 @@ class KegControl extends React.Component {
           flavor: "Smells and tastes like perfume",
           price: "64",
           alcohol: "4",
+          pints: 100,
           id: "3"
         }
       ],
@@ -67,12 +70,16 @@ class KegControl extends React.Component {
     this.setState({selectedKeg: selectedKeg});
   }
 
+  // handleBuyingPint = () => {
+  //   this.state.masterKegList
+  // }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
 
     if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} />
+      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onPintBuy={this.handleBuyingPint} />
       buttonText = "Return to Keg List";
       // While our KegDetail component only takes placeholder data, we will eventually be passing the value of selectedKeg as a prop.
     } else if (this.state.formVisibleOnPage) {
