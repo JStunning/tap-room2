@@ -18,7 +18,7 @@ function KegList(props){
             alcohol={keg.alcohol}
             pints={keg.pints}
             id={keg.id}
-            key={keg.id}
+            key={`key-${keg.id}`}
           />
           <hr/>
         </div>
