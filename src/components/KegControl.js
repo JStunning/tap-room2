@@ -75,8 +75,6 @@ class KegControl extends React.Component {
     keg.pints = keg.pints - 1;
     const otherKegsList = this.state.masterKegList.filter(keg => keg.name !== name);
     const newMasterKegList = [...otherKegsList, keg];
-    console.log("handlebuypint keg ", keg.pints)
-    console.log("handlebuypint okl ", otherKegsList)
     this.setState({
       ...this.state,
       masterKegList: newMasterKegList,
@@ -120,12 +118,11 @@ class KegControl extends React.Component {
     if (this.state.selectedKeg != null) {
       currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onBuyingPint={this.handleBuyingPint} onLoggingPints={this.handleConsoleLoggingPints} />
       buttonText = "Return to Keg List";
-      // While our KegDetail component only takes placeholder data, we will eventually be passing the value of selectedKeg as a prop.
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />;
       buttonText = "Return to Keg List";
     } else {
-      currentlyVisibleState = <KegList kegList={this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg} onLoggingPints={this.handleConsoleLoggingPints} />; // new code
+      currentlyVisibleState = <KegList kegList={this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg} />;
       buttonText = "Add Keg"; 
     }
     return (

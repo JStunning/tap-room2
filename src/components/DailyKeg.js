@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from "prop-types";
 
 function DailyKeg(props) {
-  console.log("kegList ", props.kegList);
   return (
     <React.Fragment>
       <h2>Keg of the Day</h2>
