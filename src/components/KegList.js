@@ -3,7 +3,6 @@ import Keg from './Keg';
 import PropTypes from "prop-types";
 
 function KegList(props){
-  console.log("kegList ",props.kegList)
   return (
     <React.Fragment>
       <h2>Keg List</h2>
