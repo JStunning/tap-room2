@@ -10,7 +10,7 @@
 
 _React app that has info about a keg room with what kegs they have and those details as well as a keg of the day section._
 
-_Component Diagram: ![](tap-room2\componentDiagram.png)_
+_Component Diagram: ![](./componentDiagram.png)_
 
 ## Setup/Installation Requirements
 
