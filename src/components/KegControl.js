@@ -17,7 +17,7 @@ class KegControl extends React.Component {
           flavor: "Light and easily chuggable",
           price: "69",
           alcohol: "2.20",
-          pints: 100,
+          pints: 1,
           id: 0
         },
         {
@@ -72,7 +72,9 @@ class KegControl extends React.Component {
 
   handleBuyingPint = (name) => {
     const keg = this.state.masterKegList.filter(keg => keg.name === name)[0];
-    keg.pints = keg.pints - 1;
+    if(keg.pints > 0){
+      keg.pints = keg.pints - 1;
+    }
     const otherKegsList = this.state.masterKegList.filter(keg => keg.name !== name);
     const newMasterKegList = [...otherKegsList, keg];
     this.setState({
