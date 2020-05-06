@@ -17,7 +17,7 @@ class KegControl extends React.Component {
           flavor: "Light and easily chuggable",
           price: "69",
           alcohol: "2.20",
-          pints: 1,
+          pints: 100,
           id: 0
         },
         {
